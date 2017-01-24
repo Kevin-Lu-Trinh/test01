@@ -18,3 +18,5 @@ const router = (
 );
 
 ReactDOM.render(router, document.getElementById('app'));
+
+//reset
