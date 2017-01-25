@@ -8,13 +8,19 @@ import App from './App.jsx';
 import About from './Components/About.js';
 import Contact from './Components/Contact.js';
 
+import { history } from './store.js';
+import store from './store.js';
+import { Provider } from 'react-redux';
+
 const router = (
+    <Provider store = {store}>
     <Router history = {hashHistory}>
         <Route path = "/" component = {App}>
             <Route path ="about" component = {About}></Route>
             <Route path = "contact" component = {Contact}></Route>
         </Route>
     </Router>
+    </Provider>
 );
 
 ReactDOM.render(router, document.getElementById('app'));
